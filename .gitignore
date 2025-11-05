@@ -1,5 +1,6 @@
 .vscode/
 
+/runs/
 /bin/
 /build/
 /External/

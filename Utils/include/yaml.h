@@ -2,6 +2,8 @@
 
 #include <optional>
 #include <iostream>
+#include <fstream>
+#include <filesystem>
 #include <yaml-cpp/yaml.h>
 
 
@@ -46,9 +48,22 @@ struct inputPar
 };
 
 
+
+
+
+
 // load yaml file from the given file path and return a YAML::Node
 YAML::Node loadYamlFile(const std::string& file_path);
 
+// create a edfault yaml configuration
+YAML::Node createDefaultConfig();
+
 // read the scan configuration from the yaml file and print it to the screen
-void readYamlConfig(const YAML::Node& config);
+void readYamlConfig(YAML::Node& config, const YAML::Node& input_config);
+
+// print the yaml configuration to the screen
+void printYamlConfig(const YAML::Node& config);
+
+// save the yaml configuration to the scans output directory
+void dumpYamlConfig(const YAML::Node& config);
 

@@ -1,8 +1,5 @@
 Parameters:
-  StandardModel:
-    m_h: 125.18
-    m_t: 172.76
-    alpha_s: 0.1181
+  
   pMSSM:
     tanb: [1.0, 60.0]
     M1: [0.0, 5e3]
@@ -13,11 +10,11 @@ Parameters:
     A_tau: [-1e4, 1e4]
     mu: [-1e3, 1e3]
     m_A: [0.0, 5e3]
-    m_f: [0.0, 5e3]
+    m_f: 5
 
 Options:
-  Sampling:
+  sampling:
     method: random
     n_models: 100
-  Output: 
+  output: 
     path: runs/test_scan
